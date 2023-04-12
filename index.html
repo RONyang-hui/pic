@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID-19诊治流程图</title>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+</head>
+<body>
+    <div class="mermaid">
+        graph TD;
+        A[COVID-19病人]-->B[症状出现];
+        B-->C[去医院接受检测];
+        C-->|核酸检测阳性|D[CT检查];
+        D-->|病灶明显|E[确诊为COVID-19];
+        E-->F[给予对症治疗];
+        D-->|病灶不明显|G[观察治疗];
+        C-->|核酸检测阴性|H[回家隔离观察];
+        H-->|症状加重|I[再次前往医院接受检测];
+        I-->|核酸检测阳性|D;
+        I-->|核酸检测阴性|H;
+        F-->J[给予氧气辅助呼吸];
+        F-->K[维持水电解质平衡];
+        F-->L[预防并发症];
+        F-->M[观察病情变化];
+        J-->N[监测呼吸情况和血氧饱和度];
+        K-->O[监测血压和酸碱平衡];
+        L-->P[预防肺部感染];
+        M-->Q[根据病情调整治疗方案];
+    </div>
+</body>
+</html>
