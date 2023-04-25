@@ -1,0 +1,24 @@
+        graph TD
+        GeneticFactors --> HLA_B27(HLA-B27)
+        HLA_B27 --> TcellActivation(T细胞激活)
+        
+        EnvironmentalFactors --> Infections(感染)
+        Infections --> MicrobialMimicry(微生物模拟)
+        MicrobialMimicry --> CrossReactivity(交叉反应)
+        CrossReactivity --> TcellActivation
+        
+        TcellActivation --> InflammatoryCytokines(炎症性细胞因子)
+        InflammatoryCytokines --> TNFα(TNFα)
+        InflammatoryCytokines --> IL6(IL-6)
+        InflammatoryCytokines --> IL23(IL-23)
+        
+        TNFα --> BoneErosion(骨侵蚀)
+        IL6 --> Inflammation(炎症)
+        IL23 --> Th17(Th17细胞)
+        
+        Th17 --> IL17(IL-17)
+        IL17 --> Inflammation
+        IL17 --> BoneErosion
+        Inflammation --> JointPain(关节疼痛)
+        BoneErosion --> Ankylosis(关节僵硬)
+        Ankylosis --> MobilityLoss(活动能力丧失)
